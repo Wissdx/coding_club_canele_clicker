@@ -17,6 +17,8 @@
 			canele +=1;
 			if (canele == 25)
 				alert("Tu as atteint 25 canelés !");
+			var nombrecanele = document.getElementByClassName("numberCaneles");
+			nombrecanele = canele;
 		}
 	</script>
 
@@ -25,13 +27,13 @@
 	<div class="section_caneles">
 		<img src="canelés.jpg">
 	</div>
-	<p>Vous avez <span class="numberCaneles"><script>document.write(canele);</script></span> canelés</p>
+	<p>Vous avez <span class="numberCaneles"><script>document.write(nombrecanele);</script></span> canelés</p>
 	<div>
-		<button onclick="cuisiner()">Cuisiner</button>
+		<button onclick="cuisiner(),">Cuisiner</button>
 		<button disabled="disabled">Acheter un four (25 canelés)</button>
 	</div>
 
-	
+	<footer align="center" style="margin-bottom:0;">Copyright © Wissdx 2020</footer>
 
 </body>
 
