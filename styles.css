@@ -1,0 +1,9 @@
+@font-face {
+ font-family: "Pacifico";
+ src: url("Pacifico.ttf") format("truetype");
+}
+
+h2.mainTitle{
+	color:#5f021f;
+	font-family:Pacifico;
+}
