@@ -11,14 +11,13 @@
 <body>
 
 	<script>
-		var canele = 0;
+		var nombrecanele =0;
 		function cuisiner()
 		{
-			canele +=1;
-			if (canele == 25)
+			nombrecanele +=1;
+			nombrecanele = document.getElementById("numberCaneles").innerHTML;
+			if (nombrecanele == 25)
 				alert("Tu as atteint 25 canelés !");
-			var nombrecanele = document.getElementByClassName("numberCaneles");
-			nombrecanele = document.write(canele);
 			return nombrecanele
 		}
 	</script>
@@ -28,11 +27,13 @@
 	<div class="section_caneles">
 		<img src="canelés.jpg">
 	</div>
-	<p>Vous avez <span class="numberCaneles"><script>document.write();</script></span> canelés</p>
-	<div>
-		<button onclick="cuisiner()">Cuisiner</button>
-		<button disabled="disabled">Acheter un four (25 canelés)</button>
+
 	</div>
+	<p>Vous avez <span id="numberCaneles">0</span> canelés</p>
+	<div>
+	
+	<button type="button" onclick="cuisiner()">Cuisiner</button>
+	<button disabled="disabled">Acheter un four (25 canelés)</button>
 
 	<footer align="center" style="margin-bottom:0;">Copyright © Wissdx 2020</footer>
 
