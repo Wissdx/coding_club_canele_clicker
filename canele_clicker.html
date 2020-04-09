@@ -11,31 +11,44 @@
 <body>
 
 	<script>
-		var nombrecanele =0;
-		function cuisiner()
-		{
-			nombrecanele +=1;
-			nombrecanele = document.getElementById("numberCaneles").innerHTML;
-			if (nombrecanele == 25)
-				alert("Tu as atteint 25 canelés !");
-			return nombrecanele
-		}
+	var nombrecanele = 0;
+	function cuisiner()
+	{
+		nombrecanele +=1;
+		document.getElementById("numberCaneles").innerHTML = nombrecanele;
+		if (nombrecanele%25 == 0)
+			document.getElementById("four").disabled = false;
+		else
+			document.getElementById("four").disabled = true;
+		if (nombrefour >= 1)
+			nombrecanele +=2;
+	}
+
+	var nombrefour = 0;
+	function four()
+	{
+		nombrefour +=1;
+		document.getElementById("numberFour").innerHTML = nombrefour;
+		return nombrefour
+	}
 	</script>
 
 	<h2 class="mainTitle">Canelé Clicker</h2>
 
-	<div class="section_caneles">
-		<img src="canelés.jpg">
+	<div align="center" class="section_caneles">
+		<img class="imgCanele" onclick="cuisiner()" src="canelés.jpg">
 	</div>
 
-	</div>
-	<p>Vous avez <span id="numberCaneles">0</span> canelés</p>
-	<div>
-	
-	<button type="button" onclick="cuisiner()">Cuisiner</button>
-	<button disabled="disabled">Acheter un four (25 canelés)</button>
 
-	<footer align="center" style="margin-bottom:0;">Copyright © Wissdx 2020</footer>
+	<div style="text-align:center;">
+
+		<p style="font-size:20px;">Vous avez <span id="numberCaneles">0</span> canelés !</p>
+		<p style="font-size:20px;">Vous avez <span id="numberFour">0</span> fours !</p>
+		
+		<button type="button" onclick="cuisiner()">Cuisiner</button>
+		<button id="four" disabled="disabled" onclick="four()">Acheter un four (25 canelés)</button>
+
+	</div>
 
 </body>
 

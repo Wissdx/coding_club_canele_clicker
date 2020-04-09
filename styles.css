@@ -4,10 +4,28 @@
 }
 
 h2.mainTitle{
-	color:#5f021f;
+	color:#a47;
 	font-family:Pacifico;
+	text-align:center;
+	margin-top:20px;
+	background-color:grey;
 }
 
-#numberCaneles{
+#numberCaneles,#numberFour{
 	color:#a47;
+}
+
+.imgCanele{
+	border-radius:15px;
+	width:800px;
+	height:533px;
+	text-align:center;
+}
+
+div.section_caneles{
+	margin:40px;
+}
+
+body{
+	background-image:url("background.jpg");
 }
